@@ -1,0 +1,15 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: var(--primary200);
+  color: var(--textPrimary);
+  padding: 10px;
+}
+
+.button-container:hover {
+  background-color: var(--custom);
+  color: var(--primary200);
+}

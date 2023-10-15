@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme {
+  --main: #fafafa;
+  --secondary: #ffffff;
+  --primary100: #075ff7;
+  --primary200: #1165ef;
+  --primary300: #8eb5f4;
+  --custom: #b5b5b5;
+  --textPrimary: #ffffff;
+  --textSecondary: #111827;
+  --textCustom: #b5b5b5;
 }
+.no-highlight {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-text-select: none;
+  -webkit-user-select: none;
+}
+.layout {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+/*28px Larger weight 700
+20px medium weight 600
+16px average weight 600
+18px weight 500
+14px smaller weight 600(button as well) && 400
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+*/
+
+/*
+
+components to be made
+
+Button
+dropdown
+square card
+input 
+*/
+@media screen and (min-width: 320px) {
+  .App {
+    --heading: 22px;
+    --subHeading: 16px;
+    --bigtext: 14px;
+    --mediumText: 13px;
+    --menu: 13px;
+    --text: 13px;
+    position: fixed;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 480px) {
+  .App {
+    --heading: 24px;
+    --subHeading: 16px;
+    --bigtext: 14px;
+    --mediumText: 13px;
+    --menu: 13px;
+    --text: 13px;
+    position: fixed;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (min-width: 600px) {
+  .App {
+    --heading: 25px;
+    --subHeading: 17px;
+    --bigtext: 15px;
+    --mediumText: 14px;
+    --menu: 14px;
+    --text: 14px;
+    position: fixed;
+  }
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media screen and (min-width: 801px) {
+  .App {
+    --heading: 26px;
+    --subHeading: 18px;
+    --bigtext: 16px;
+    --mediumText: 14px;
+    --menu: 15px;
+    --text: 15px;
+    position: fixed;
+  }
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media screen and (min-width: 1025px) {
+  .App {
+    --heading: 27px;
+    --subHeading: 19px;
+    --bigtext: 17px;
+    --mediumText: 15px;
+    --menu: 16px;
+    --text: 16px;
+    position: fixed;
+  }
+  /* big landscape tablets, laptops, and desktops */
+}
+@media screen and (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .App {
+    /*28px Larger weight 700
+20px medium weight 600
+16px average weight 600
+18px weight 500
+14px smaller weight 600(button as well) && 400*/
+    --heading: 28px;
+    --subHeading: 20px;
+    --bigtext: 18px;
+    --mediumText: 16px;
+    --menu: 17px;
+    --text: 17px;
+    position: fixed;
   }
 }
