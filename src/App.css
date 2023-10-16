@@ -22,6 +22,8 @@
 .layout {
   margin: 0;
   padding: 0;
+  display: flex;
+  box-sizing: content-box;
   width: 100vw;
   height: 100vh;
 }
@@ -43,6 +45,18 @@ dropdown
 square card
 input 
 */
+
+@media screen and (max-width: 320px) {
+  .App {
+    --heading: 22px;
+    --subHeading: 16px;
+    --bigtext: 14px;
+    --mediumText: 13px;
+    --menu: 13px;
+    --text: 13px;
+    position: fixed;
+  }
+}
 @media screen and (min-width: 320px) {
   .App {
     --heading: 22px;

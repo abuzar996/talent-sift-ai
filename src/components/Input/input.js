@@ -1,12 +1,12 @@
 import React from "react";
 import "./input.styles.css";
-const Input = ({ icon }) => {
+const Input = ({ icon, placeHolder }) => {
   return (
     <div className="input-container">
       <div className="input-main-container">
         <input
           className="input-inner-container"
-          placeholder="Enter Text To Search..."
+          placeholder={placeHolder}
           type="text"
         />
       </div>

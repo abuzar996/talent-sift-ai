@@ -1,0 +1,56 @@
+.select-main-container {
+  display: flex;
+  align-items: center;
+}
+.select-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.select-container-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-self: center;
+}
+.select-container-heading > label {
+  font-size: var(--heading);
+  font-weight: 600;
+  color: var(--textSecondary);
+}
+
+.select-container-description {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.select-container-description > label {
+  font-size: var(--text);
+  font-weight: 300;
+  color: var(--textSecondary);
+}
+.select-options-grid {
+  display: flex;
+
+  justify-content: center;
+}
+.select-options-footer-input-section {
+  align-self: stretch;
+}
+@media screen and (min-width: 600px) {
+  .select-options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .select-options-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
