@@ -1,0 +1,17 @@
+.tag-container {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  background-color: var(--primary300);
+  border-radius: 15px;
+}
+.tag-container > label {
+  font-size: var(--textTag);
+  font-weight: 700;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--primary100);
+}

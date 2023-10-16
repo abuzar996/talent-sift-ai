@@ -50,6 +50,7 @@
     --menu: 13px;
     --text: 13px;
     --textCrousal: 11px;
+    --textTag: 11px;
     position: fixed;
   }
 }
@@ -62,6 +63,7 @@
     --menu: 13px;
     --text: 13px;
     --textCrousal: 11px;
+    --textTag: 11px;
     position: fixed;
   }
 }
@@ -74,6 +76,7 @@
     --menu: 14px;
     --text: 14px;
     --textCrousal: 12px;
+    --textTag: 11px;
     position: fixed;
   }
 }
@@ -86,6 +89,7 @@
     --menu: 15px;
     --text: 15px;
     --textCrousal: 13px;
+    --textTag: 11px;
     position: fixed;
   }
 }
@@ -98,6 +102,7 @@
     --menu: 16px;
     --text: 16px;
     --textCrousal: 13px;
+    --textTag: 11px;
     position: fixed;
   }
 }
@@ -110,6 +115,7 @@
     --menu: 17px;
     --text: 17px;
     --textCrousal: 13px;
+    --textTag: 11px;
     position: fixed;
   }
 }
