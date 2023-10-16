@@ -1,7 +1,12 @@
 import "./App.css";
 //import { BiSearch } from "react-icons/bi";
-import { BsFillPersonFill } from "react-icons/bs";
-import Button from "./containers/Select";
+//import { BsFillPersonFill } from "react-icons/bs";
+//import Button from "./containers/Select";
+//import Nav from "./containers/Nav";
+//import Overlay from "./containers/Overlay";
+import SearchView from "./views/searchView";
+import Crousal from "./containers/Crousal";
+import Nav from "./containers/Nav";
 //import Input from "./components/Input";
 function App() {
   return (
@@ -14,12 +19,18 @@ function App() {
       >
         <div style={{ display: "flex", width: "50%" }}> */}
       {/* <div style={{ display: "flex" }}> */}
-      <Button
+      {/* <Button
         icon={<BsFillPersonFill />}
         description={"hello my name is abuzar"}
         heading={"hindndndni"}
-      ></Button>
+      ></Button> */}
+
+      <div>
+        <Nav Title={"Back"} />
+        <Crousal />
+      </div>
     </div>
+
     //</div>
     //  </div>
     //</div>

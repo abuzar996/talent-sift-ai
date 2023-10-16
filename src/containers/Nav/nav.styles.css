@@ -1,0 +1,22 @@
+.nav-container {
+  display: flex;
+
+  flex-direction: row;
+  padding: 10px;
+  justify-content: space-between;
+}
+.nav-left-container {
+  display: flex;
+
+  column-gap: 15%;
+}
+.nav-left-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left-container > div > label {
+  font-size: var(--heading);
+  font-weight: 400;
+  color: var(--textSecondary);
+}

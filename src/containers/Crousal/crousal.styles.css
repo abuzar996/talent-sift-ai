@@ -1,0 +1,88 @@
+.crousal-container {
+  background-color: var(--custom);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 10px;
+}
+.crousal-flex-items {
+  box-sizing: border-box;
+  display: flex;
+  gap: 2%;
+}
+.crousal-flex-padding {
+  padding: 10px;
+}
+.crousal_name_item {
+  align-self: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: var(--textCrousal);
+  font-weight: 600;
+  color: var(--textSecondary);
+}
+.crousal-selected {
+  border-bottom: 2px solid var(--primary100);
+}
+
+.crousel-name-item-selected {
+  align-self: center;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: var(--textCrousal);
+  font-weight: 600;
+  color: var(--primary100);
+}
+.crousal-count-item {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: var(--text);
+  font-weight: 100;
+  color: var(--texSecondary100);
+}
+.crousal-count-item-selected {
+  padding-left: 2px;
+  padding-right: 2px;
+  font-size: var(--text);
+  font-weight: 100;
+  color: var(--primary100);
+}
+.crousel-icon-item {
+  align-self: center;
+  color: var(--texSecondary100);
+}
+.crousel-icon-item-selected {
+  align-self: center;
+  color: var(--primary100);
+}
+.drop-down-crousal {
+  display: flex;
+  border: 1px solid var(--textSecondary);
+
+  border-radius: 10px;
+}
+.drop-down-crousal > label {
+  padding: 10px;
+  font-size: var(--textCrousal);
+  font-weight: 200;
+  color: var(--textSecondary100);
+  padding-right: 10px;
+}
+.drop-down-crousal > div {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--textSecondary);
+  border-left: 1px solid var(--textSecondary);
+  align-items: center;
+}
+.drop-down-crousal > div:hover {
+  background-color: var(--custom);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.crousal-flex-items:hover {
+  background-color: var(--primary300);
+}

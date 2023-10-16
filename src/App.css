@@ -11,6 +11,7 @@
   --custom: #b5b5b5;
   --textPrimary: #ffffff;
   --textSecondary: #111827;
+  --textSecondary100: #161c28;
   --textCustom: #b5b5b5;
 }
 .no-highlight {
@@ -27,24 +28,6 @@
   width: 100vw;
   height: 100vh;
 }
-/*28px Larger weight 700
-20px medium weight 600
-16px average weight 600
-18px weight 500
-14px smaller weight 600(button as well) && 400
-
-
-*/
-
-/*
-
-components to be made
-
-Button
-dropdown
-square card
-input 
-*/
 
 @media screen and (max-width: 320px) {
   .App {
@@ -55,6 +38,7 @@ input
     --menu: 13px;
     --text: 13px;
     position: fixed;
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 320px) {
@@ -65,6 +49,7 @@ input
     --mediumText: 13px;
     --menu: 13px;
     --text: 13px;
+    --textCrousal: 11px;
     position: fixed;
   }
 }
@@ -76,6 +61,7 @@ input
     --mediumText: 13px;
     --menu: 13px;
     --text: 13px;
+    --textCrousal: 11px;
     position: fixed;
   }
 }
@@ -87,9 +73,9 @@ input
     --mediumText: 14px;
     --menu: 14px;
     --text: 14px;
+    --textCrousal: 12px;
     position: fixed;
   }
-  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
 @media screen and (min-width: 801px) {
   .App {
@@ -99,9 +85,9 @@ input
     --mediumText: 14px;
     --menu: 15px;
     --text: 15px;
+    --textCrousal: 13px;
     position: fixed;
   }
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 @media screen and (min-width: 1025px) {
   .App {
@@ -111,24 +97,19 @@ input
     --mediumText: 15px;
     --menu: 16px;
     --text: 16px;
+    --textCrousal: 13px;
     position: fixed;
   }
-  /* big landscape tablets, laptops, and desktops */
 }
 @media screen and (min-width: 1281px) {
-  /* hi-res laptops and desktops */
   .App {
-    /*28px Larger weight 700
-20px medium weight 600
-16px average weight 600
-18px weight 500
-14px smaller weight 600(button as well) && 400*/
     --heading: 28px;
     --subHeading: 20px;
     --bigtext: 18px;
     --mediumText: 16px;
     --menu: 17px;
     --text: 17px;
+    --textCrousal: 13px;
     position: fixed;
   }
 }

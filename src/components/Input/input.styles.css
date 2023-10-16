@@ -11,10 +11,15 @@
 .input-main-container {
   flex: 90%;
 }
+
+.input-container:focus {
+  border: 2px solid red;
+}
 .input-inner-container {
   width: 100%;
   outline: none;
   border: none;
+  background-color: var(--main);
   font-size: var(--text);
 }
 .icon-main-container {
