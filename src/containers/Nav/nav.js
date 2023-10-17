@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
-
+import { useDimentions } from "../../hooks/useDimensions";
+import { useDispatch } from "react-redux";
+import { updateMainHeaderHeight } from "../../redux/slices/appSlice";
 import "./nav.styles.css";
 const Nav = ({ Title, sides }) => {
+  const dispatch = useDispatch();
+
+  const Ref = useRef();
+  const windowSize = useDimentions();
+
+  useEffect(() => {
+    if (Ref) {
+      dispatch(updateMainHeaderHeight(Ref.current.clientHeight));
+    }
+  }, [windowSize, dispatch]);
+
   return (
-    <div className="nav-container">
+    <div ref={Ref} className="nav-container">
       <div className="nav-left-container">
         <div>
           <AiOutlineArrowLeft />

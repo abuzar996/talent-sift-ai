@@ -1,0 +1,42 @@
+.heading-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  flex: 1;
+}
+
+.heading-container-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.heading-container-main-heading {
+  font-size: var(--subHeading);
+  font-weight: 800;
+  padding-left: 20px;
+  color: var(--textSecondary);
+  flex: 1;
+}
+
+.sub-heading-container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.sub-heading-label {
+  font-size: var(--textTag);
+  font-weight: 100;
+  color: var(--textSecondary);
+}
+
+.heading-tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2%;
+  column-gap: 2%;
+}

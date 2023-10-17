@@ -1,3 +1,10 @@
+.tag-outer-container {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .tag-container {
   display: flex;
   height: fit-content;

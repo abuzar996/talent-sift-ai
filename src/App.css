@@ -37,6 +37,8 @@
     --mediumText: 13px;
     --menu: 13px;
     --text: 13px;
+    --textCrousal: 11px;
+    --textTag: 11px;
     position: fixed;
     overflow: scroll;
   }
@@ -118,4 +120,14 @@
     --textTag: 11px;
     position: fixed;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

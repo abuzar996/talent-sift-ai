@@ -5,36 +5,29 @@ import "./App.css";
 //import Nav from "./containers/Nav";
 //import Overlay from "./containers/Overlay";
 //import SearchView from "./views/searchView";
-//import Crousal from "./containers/Crousal";
-// import Nav from "./containers/Nav";
-import Tag from "./components/Tag";
+import Crousal from "./containers/Crousal";
+import Nav from "./containers/Nav";
+import SearchSidebar from "./containers/SearchSidebar";
+//import Heading from "./containers/SearchSidebar/Sections/Headings/heading";
+//import Tag from "./components/Tag";
 //import Input from "./components/Input";
 function App() {
   return (
     <div className="App theme layout no-highlight">
-      {/* <div
+      <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          flex: "1",
         }}
       >
-        <div style={{ display: "flex", width: "50%" }}> */}
-      {/* <div style={{ display: "flex" }}> */}
-      {/* <Button
-        icon={<BsFillPersonFill />}
-        description={"hello my name is abuzar"}
-        heading={"hindndndni"}
-      ></Button> */}
-      <Tag value={"your tag goes here so yeah you couldnnnnnnnnnnnnnnnnnnnn"} />
-      {/* <div>
-        <Nav Title={"Back"} />
+        <Nav Title={"Search"} />
         <Crousal />
-      </div> */}
+        <div style={{ width: "30%" }}>
+          <SearchSidebar />
+        </div>
+      </div>
     </div>
-
-    //</div>
-    //  </div>
-    //</div>
   );
 }
 

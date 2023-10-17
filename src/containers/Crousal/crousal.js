@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./crousal.styles.css";
 import { useDimentions } from "../../hooks/useDimensions";
 import { mainCrousalData } from "../../constants/mainCrousalData";
 import { useDispatch, useSelector } from "react-redux";
-import { setData, updateData } from "../../redux/slices/appSlice";
+import {
+  setData,
+  updateData,
+  updateCrousalHeight,
+} from "../../redux/slices/appSlice";
 import { Select, FormControl, MenuItem } from "@mui/material";
 
 const DataProvider = ({ icon, name, count, flex, selected }) => {
@@ -85,6 +89,14 @@ const Crousal = () => {
   const windowSize = useDimentions();
   const [selectedValue, setSelectedValue] = useState(mainCrousalData[0].name);
 
+  const Ref = useRef();
+
+  useEffect(() => {
+    if (Ref) {
+      dispatch(updateCrousalHeight(Ref.current.clientHeight));
+    }
+  }, [windowSize, dispatch]);
+
   useEffect(() => {
     dispatch(setData(mainCrousalData));
   }, [dispatch]);
@@ -107,7 +119,7 @@ const Crousal = () => {
     setSelectedValue(data.name);
   }
   return (
-    <div className="crousal-container">
+    <div ref={Ref} className="crousal-container">
       {mobileView ? (
         <DropDownProvider
           selectedValue={selectedValue}

@@ -1,9 +1,11 @@
 import React from "react";
 import "./tag.styles.css";
-const Tag = ({ value }) => {
+const Tag = ({ title }) => {
   return (
-    <div className="tag-container">
-      <label>hello mu name is abuzar how are you are you good </label>
+    <div className="tag-outer-container">
+      <div className="tag-container">
+        <label>{title} </label>
+      </div>
     </div>
   );
 };

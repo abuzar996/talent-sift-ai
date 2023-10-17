@@ -4,6 +4,9 @@ const initialState = {
   loading: false,
   error: [],
   crousalsData: [],
+  searchSidebarHeight: 0,
+  mainHeaderHeight: 0,
+  crousalHeight: 0,
 };
 
 const appSettingSlice = createSlice({
@@ -20,7 +23,22 @@ const appSettingSlice = createSlice({
           : (data.selected = false)
       );
     },
+    updateSearchSideBarHeight: (state, action) => {
+      state.searchSidebarHeight = action.payload;
+    },
+    updateMainHeaderHeight: (state, action) => {
+      state.mainHeaderHeight = action.payload;
+    },
+    updateCrousalHeight: (state, action) => {
+      state.crousalHeight = action.payload;
+    },
   },
 });
-export const { setData, updateData } = appSettingSlice.actions;
+export const {
+  setData,
+  updateData,
+  updateSearchSideBarHeight,
+  updateMainHeaderHeight,
+  updateCrousalHeight,
+} = appSettingSlice.actions;
 export default appSettingSlice.reducer;
