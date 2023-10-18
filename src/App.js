@@ -1,17 +1,13 @@
 import "./App.css";
-//import { BiSearch } from "react-icons/bi";
-//import { BsFillPersonFill } from "react-icons/bs";
-//import Button from "./containers/Select";
-//import Nav from "./containers/Nav";
-//import Overlay from "./containers/Overlay";
-//import SearchView from "./views/searchView";
+import { countries } from "countries-list";
+import { useSelector } from "react-redux";
 import Crousal from "./containers/Crousal";
 import Nav from "./containers/Nav";
 import SearchSidebar from "./containers/SearchSidebar";
-//import Heading from "./containers/SearchSidebar/Sections/Headings/heading";
-//import Tag from "./components/Tag";
-//import Input from "./components/Input";
+
 function App() {
+  console.log(countries);
+  const { searchSidebarHeight } = useSelector((state) => state.app);
   return (
     <div className="App theme layout no-highlight">
       <div
@@ -21,9 +17,15 @@ function App() {
           flex: "1",
         }}
       >
-        <Nav Title={"Search"} />
+        <Nav Title={"Search / Search Candidate"} />
         <Crousal />
-        <div style={{ width: "30%" }}>
+        <div
+          style={{
+            width: "30%",
+            height: `${searchSidebarHeight}px`,
+            overflow: "scroll",
+          }}
+        >
           <SearchSidebar />
         </div>
       </div>

@@ -83,7 +83,6 @@ const FlexDataProvider = ({ crousalData, onClick }) => {
 const Crousal = () => {
   const dispatch = useDispatch();
   const { crousalsData } = useSelector((state) => state.app);
-  console.log(crousalsData);
   const [mobileView, setMobileView] = useState(false);
 
   const windowSize = useDimentions();
