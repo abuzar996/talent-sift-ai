@@ -36,16 +36,34 @@ const appSettingSlice = createSlice({
     updateSearchSidebarData: (state, action) => {
       state.sideBarData = action.payload;
     },
+    toggleFiler: (state, action) => {
+      state.sideBarData.forEach((data) => {
+        if (data.heading === action.payload.heading) {
+          data.subHeading.forEach((sub) => {
+            if (sub.name === action.payload.name) {
+              sub.active = !sub.active;
+            }
+          });
+        }
+      });
+    },
     editSearchSidebarData: (state, action) => {
       if (action.payload.value) {
         state.sideBarData.forEach((data) => {
           if (data.heading === action.payload.heading) {
             data.subHeading.forEach((sub) => {
               if (sub.name === action.payload.subHeading.name) {
-                sub.tags.push({
-                  title: action.payload.value,
-                  id_: sub.tags.length + 1,
-                });
+                sub.tags
+                  ? sub.tags.push({
+                      title: action.payload.value,
+                      id_: sub.tags.length + 1,
+                    })
+                  : (sub.tags = [
+                      {
+                        title: action.payload.value,
+                        id_: sub.tags?.length ? sub.tags.length + 1 : 1,
+                      },
+                    ]);
                 sub.opened = false;
               }
             });
@@ -85,5 +103,6 @@ export const {
   updateCrousalHeight,
   updateSearchSidebarData,
   editSearchSidebarData,
+  toggleFiler,
 } = appSettingSlice.actions;
 export default appSettingSlice.reducer;

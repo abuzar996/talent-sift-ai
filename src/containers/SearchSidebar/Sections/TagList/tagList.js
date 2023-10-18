@@ -3,6 +3,7 @@ import "./tagList.styles.css";
 import Tag from "../../../../components/Tag";
 import AddTag from "../../../../components/AddTag";
 import Select from "react-select";
+//import { countries } from "countries-list";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { editSearchSidebarData } from "../../../../redux/slices/appSlice";
 import { useDispatch } from "react-redux";
@@ -31,6 +32,10 @@ const TagList = ({ tags, opened, heading, subHeading }) => {
             <Select
               options={[
                 { value: "Software Engineer", label: "software Engineer" },
+                { value: "Staff Engineer", label: "Staff Engineer" },
+                { value: "Full stack Engineer", label: "Full stack Engineer" },
+                { value: "Data Engineer", label: "Data Engineer" },
+                { value: "Ai Engineer", label: "Ai Engineer" },
               ]}
               onChange={onHandleChange}
             />

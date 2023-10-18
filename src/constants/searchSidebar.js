@@ -14,6 +14,7 @@ export const searchSideData = [
       {
         name: "TalentSift Magic",
         id_: 11,
+        active: false,
         tags: [
           {
             title: "Verified Repoistory for junior developers",
@@ -40,21 +41,24 @@ export const searchSideData = [
     heading: "Job Title",
     id_: 2,
     icon: <MdWorkHistory />,
+
     subHeading: [
       {
         name: "Current Title",
         id_: 21,
+        active: false,
         tags: [
           {
             title: "Software Engineer",
             id_: 1,
           },
         ],
-        opened: true,
+        opened: false,
       },
       {
         name: "Recent Ttile",
         id_: 22,
+        active: true,
         tags: [
           {
             title: "Staff Engineer",
@@ -73,6 +77,7 @@ export const searchSideData = [
       {
         name: "Location",
         id_: 31,
+        active: false,
         tags: [
           {
             title: "United States",
@@ -91,6 +96,7 @@ export const searchSideData = [
       {
         name: "Must have skills",
         id_: 41,
+        active: false,
         tags: [
           {
             title: "JavaScript",
@@ -109,6 +115,7 @@ export const searchSideData = [
       {
         name: "Companies and domains",
         id_: 51,
+        active: true,
         tags: [
           {
             title: "Apple.inc",
@@ -127,6 +134,7 @@ export const searchSideData = [
       {
         name: "Recent Growth Rate",
         id_: 61,
+        active: true,
         tags: [
           {
             title: "Remote Working",
@@ -141,6 +149,8 @@ export const searchSideData = [
     heading: "Company Size",
     id_: 7,
     icon: <IoIosPeople />,
-    subHeading: [{ name: "Recent Size", id_: 71, opened: false }],
+    subHeading: [
+      { name: "Recent Size", id_: 71, opened: false, active: false },
+    ],
   },
 ];
