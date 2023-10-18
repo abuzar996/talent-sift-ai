@@ -1,0 +1,10 @@
+.image-container {
+  display: flex;
+}
+.image-container > img {
+  display: flex;
+  border-radius: 50%;
+  border: 2px solid var(--main);
+  height: 50px;
+  width: 50px;
+}

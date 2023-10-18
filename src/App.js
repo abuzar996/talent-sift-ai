@@ -6,6 +6,8 @@ import Nav from "./containers/Nav";
 import SearchSidebar from "./containers/SearchSidebar";
 //import Select from "./components/Select";
 //import Select from "react-select";
+import InfoCard from "./containers/infoCard";
+import Avatar from "./components/Avatar";
 function App() {
   // let options = ["helo", "123", "CYYY"]; //console.log(countries);
   const { searchSidebarHeight } = useSelector((state) => state.app);
@@ -18,6 +20,12 @@ function App() {
           flex: "1",
         }}
       >
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+      </div>
+      {/*
         <Nav Title={"Search / Search Candidate"} />
         <Crousal />
         <div
@@ -29,7 +37,7 @@ function App() {
         >
           <SearchSidebar />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

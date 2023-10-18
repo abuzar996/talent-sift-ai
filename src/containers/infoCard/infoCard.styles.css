@@ -1,0 +1,45 @@
+.info-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.info-card-left-inner-container {
+  padding: 10px;
+}
+
+.info-card-right-inner-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex: 4;
+  flex-direction: column;
+}
+
+.info-card-candidate-name {
+  font-size: var(--subHeading);
+  font-weight: 500;
+  color: var(--primary200);
+  text-wrap: wrap;
+  text-decoration: underline;
+}
+.info-card-candidate-headline {
+  font-size: var(--text);
+  font-weight: 400;
+  color: var(--textSecondary);
+  text-wrap: wrap;
+}
+.info-card-priority-section {
+  display: flex;
+  flex-direction: column;
+}
+.info-card-candidate-priority {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  color: rgb(139, 152, 139);
+}
+.info-card-candidate-priority-remarks {
+  font-size: 9px;
+  color: orange;
+  text-decoration: underline;
+}
