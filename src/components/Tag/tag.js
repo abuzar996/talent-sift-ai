@@ -1,8 +1,8 @@
 import React from "react";
 import "./tag.styles.css";
-const Tag = ({ title }) => {
+const Tag = ({ title, onClick }) => {
   return (
-    <div className="tag-outer-container">
+    <div onClick={onClick} className="tag-outer-container">
       <div className="tag-container">
         <label>{title} </label>
       </div>

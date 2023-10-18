@@ -7,6 +7,7 @@ const initialState = {
   searchSidebarHeight: 0,
   mainHeaderHeight: 0,
   crousalHeight: 0,
+  sideBarData: [],
 };
 
 const appSettingSlice = createSlice({
@@ -32,6 +33,48 @@ const appSettingSlice = createSlice({
     updateCrousalHeight: (state, action) => {
       state.crousalHeight = action.payload;
     },
+    updateSearchSidebarData: (state, action) => {
+      state.sideBarData = action.payload;
+    },
+    editSearchSidebarData: (state, action) => {
+      if (action.payload.value) {
+        state.sideBarData.forEach((data) => {
+          if (data.heading === action.payload.heading) {
+            data.subHeading.forEach((sub) => {
+              if (sub.name === action.payload.subHeading.name) {
+                sub.tags.push({
+                  title: action.payload.value,
+                  id_: sub.tags.length + 1,
+                });
+                sub.opened = false;
+              }
+            });
+          }
+        });
+      } else {
+        if (action.payload.add === true) {
+          state.sideBarData.forEach((data) => {
+            if (data.heading === action.payload.heading) {
+              data.subHeading.forEach((sub) => {
+                if (sub.name === action.payload.subHeading.name) {
+                  sub.opened = true;
+                }
+              });
+            }
+          });
+        } else {
+          state.sideBarData.forEach((data) => {
+            if (data.heading === action.payload.heading) {
+              data.subHeading.forEach((sub) => {
+                if (sub.name === action.payload.subHeading.name) {
+                  sub.opened = false;
+                }
+              });
+            }
+          });
+        }
+      }
+    },
   },
 });
 export const {
@@ -40,5 +83,7 @@ export const {
   updateSearchSideBarHeight,
   updateMainHeaderHeight,
   updateCrousalHeight,
+  updateSearchSidebarData,
+  editSearchSidebarData,
 } = appSettingSlice.actions;
 export default appSettingSlice.reducer;

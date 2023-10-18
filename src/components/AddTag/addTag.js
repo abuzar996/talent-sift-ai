@@ -1,9 +1,9 @@
 import React from "react";
 import "./addTag.styles.css";
 import { GrFormAdd } from "react-icons/gr";
-const AddTag = () => {
+const AddTag = ({ onClick }) => {
   return (
-    <div className="add-tag-container">
+    <div onClick={onClick} className="add-tag-container">
       <GrFormAdd />
     </div>
   );

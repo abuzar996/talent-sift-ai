@@ -1,8 +1,9 @@
 import React from "react";
 import "./heading.styles.css";
 import { Switch } from "@mui/material";
-import TagList from "../TagList/tagList";
-const Heading = ({ heading, icon, subHeading, children, tags }) => {
+import TagList from "../TagList";
+
+const Heading = ({ heading, icon, subHeading, opened }) => {
   return (
     <div className="heading-container">
       <div className="heading-container-header">
@@ -17,7 +18,12 @@ const Heading = ({ heading, icon, subHeading, children, tags }) => {
               <Switch />
             </div>
             <div className="heading-tag-container">
-              <TagList tags={sub.tags} />
+              <TagList
+                tags={sub.tags}
+                opened={sub.opened}
+                heading={heading}
+                subHeading={sub}
+              />
             </div>
           </div>
         ))}

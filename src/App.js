@@ -1,12 +1,13 @@
 import "./App.css";
-import { countries } from "countries-list";
+//import { countries } from "countries-list";
 import { useSelector } from "react-redux";
 import Crousal from "./containers/Crousal";
 import Nav from "./containers/Nav";
 import SearchSidebar from "./containers/SearchSidebar";
-
+//import Select from "./components/Select";
+//import Select from "react-select";
 function App() {
-  console.log(countries);
+  // let options = ["helo", "123", "CYYY"]; //console.log(countries);
   const { searchSidebarHeight } = useSelector((state) => state.app);
   return (
     <div className="App theme layout no-highlight">
