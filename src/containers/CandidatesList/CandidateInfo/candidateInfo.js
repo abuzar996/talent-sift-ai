@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "./candidateInfo.styles.css";
 import InfoCard from "../../infoCard";
 import ExperienceInfo from "../../ExperienceInfoCard";
 import Button from "../../../components/Button";
-const CandidateInfo = () => {
+const CandidateInfo = ({
+  name,
+  image,
+  currentRole,
+  company,
+  Experiences,
+  Education,
+}) => {
+  const [info] = useState({
+    name,
+    image,
+    currentRole,
+    company,
+  });
+
   return (
     <div className="candidate-info-main-container">
       <div>
-        <InfoCard />
+        <InfoCard {...info} />
       </div>
-      <div>
-        <ExperienceInfo heading={"Experience"} />
-      </div>
-      <div>
-        <ExperienceInfo heading={"Education"} />
-      </div>
+      {Experiences && Experiences.length > 0 && (
+        <div>
+          <ExperienceInfo heading={"Experience"} Experiences={Experiences} />
+        </div>
+      )}
+      {Education && Education.length > 0 && (
+        <div>
+          <ExperienceInfo heading={"Education"} Education={Education} />
+        </div>
+      )}
       <div className="candidate-info-main-container-last">
-        <div style={{ float: "right" }}>
+        <div>
           <Button>Shortlist</Button>
         </div>
       </div>

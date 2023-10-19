@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex: 1;
   padding: 0;
   box-sizing: border-box;
+  align-items: center;
   border-bottom: 2px solid var(--main);
 }
 
@@ -24,4 +24,8 @@
   align-items: center;
 
   justify-content: flex-end;
+}
+
+.candidate-info-main-container-last > div {
+  float: right;
 }
