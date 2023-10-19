@@ -1,5 +1,43 @@
 .experience-card-container {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.tag-line-container {
+  text-wrap: wrap;
+  display: flex;
+  padding: 10px;
   flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.tag-line-img-container {
+  display: flex;
+  align-items: center;
+}
+.tag-line-position-label {
+  color: var(--textSecondary);
+  text-wrap: wrap;
+  font-size: var(--text);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.experience-card-label {
+  color: rgb(43, 42, 42);
+  font-size: var(--bigtext);
+  font-weight: 600;
+  padding: 10px;
+}
+.tag-line-position-divider-label {
+  color: rgb(43, 42, 42);
+  text-wrap: wrap;
+  font-size: var(--text);
+  font-weight: 300;
+}
+
+.sub-heading0tag-line-container {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }

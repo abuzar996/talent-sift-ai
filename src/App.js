@@ -6,24 +6,27 @@ import Nav from "./containers/Nav";
 import SearchSidebar from "./containers/SearchSidebar";
 //import Select from "./components/Select";
 //import Select from "react-select";
-import InfoCard from "./containers/infoCard";
-import Avatar from "./components/Avatar";
+import InfoCard from "./containers/ExperienceInfoCard";
+import CandidateInfo from "./containers/CandidatesList/CandidateInfo";
+//import Avatar from "./components/Avatar";
 function App() {
   // let options = ["helo", "123", "CYYY"]; //console.log(countries);
-  const { searchSidebarHeight } = useSelector((state) => state.app);
+  // const { searchSidebarHeight } = useSelector((state) => state.app);
   return (
     <div className="App theme layout no-highlight">
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          flex: "1",
         }}
       >
+        <CandidateInfo />
+        <CandidateInfo />
+        <CandidateInfo />
+        <CandidateInfo />
+        {/*        <InfoCard />
         <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        <InfoCard /> */}
       </div>
       {/*
         <Nav Title={"Search / Search Candidate"} />
