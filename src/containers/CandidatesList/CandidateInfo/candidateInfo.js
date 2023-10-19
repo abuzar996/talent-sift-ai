@@ -20,7 +20,7 @@ const CandidateInfo = ({
 
   return (
     <div className="candidate-info-main-container">
-      <div>
+      <div className="candidate-info-main-container-first">
         <InfoCard {...info} />
       </div>
       {Experiences && Experiences.length > 0 && (
@@ -35,7 +35,7 @@ const CandidateInfo = ({
       )}
       <div className="candidate-info-main-container-last">
         <div>
-          <Button>Shortlist</Button>
+          <Button style={{ fontSize: "10px" }}>Shortlist</Button>
         </div>
       </div>
     </div>

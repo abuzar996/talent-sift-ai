@@ -13,7 +13,7 @@ const TagLine = ({ logo, role, company, location, Dates, degree, school }) => {
       </label>
       <label className="tag-line-position-divider-label">at</label>
       <label className="tag-line-position-label">
-        {company ? company : school ? school : null},
+        {company ? company : school ? school : null}.
       </label>
       <label className="tag-line-position-divider-label">{Dates}</label>
     </div>

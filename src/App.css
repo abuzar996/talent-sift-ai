@@ -14,6 +14,7 @@
   --textSecondary: #111827;
   --textSecondary100: #161c28;
   --textCustom: #b5b5b5;
+  --miniHeading: 12px;
 }
 .no-highlight {
   user-select: none;
@@ -40,6 +41,7 @@
     --text: 13px;
     --textCrousal: 11px;
     --textTag: 11px;
+    --miniText: 10px;
     position: fixed;
     overflow: scroll;
   }
@@ -54,6 +56,7 @@
     --text: 13px;
     --textCrousal: 11px;
     --textTag: 11px;
+    --miniText: 10px;
     position: fixed;
   }
 }
@@ -67,6 +70,7 @@
     --text: 13px;
     --textCrousal: 11px;
     --textTag: 11px;
+    --miniText: 10px;
     position: fixed;
   }
 }
@@ -80,6 +84,7 @@
     --text: 14px;
     --textCrousal: 12px;
     --textTag: 11px;
+    --miniText: 10px;
     position: fixed;
   }
 }
@@ -93,6 +98,7 @@
     --text: 15px;
     --textCrousal: 13px;
     --textTag: 11px;
+    --miniText: 10px;
     position: fixed;
   }
 }
@@ -106,6 +112,7 @@
     --text: 16px;
     --textCrousal: 13px;
     --textTag: 11px;
+    --miniText: 10px;
     position: fixed;
   }
 }

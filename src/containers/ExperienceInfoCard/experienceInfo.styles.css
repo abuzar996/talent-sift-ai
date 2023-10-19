@@ -19,20 +19,20 @@
 .tag-line-position-label {
   color: var(--textSecondary);
   text-wrap: wrap;
-  font-size: var(--text);
+  font-size: var(--miniText);
   text-decoration: underline;
   font-weight: 500;
 }
 .experience-card-label {
   color: rgb(43, 42, 42);
-  font-size: var(--bigtext);
+  font-size: var(--miniHeading);
   font-weight: 600;
   padding: 10px;
 }
 .tag-line-position-divider-label {
   color: rgb(43, 42, 42);
   text-wrap: wrap;
-  font-size: var(--text);
+  font-size: var(--miniText);
   font-weight: 300;
 }
 
