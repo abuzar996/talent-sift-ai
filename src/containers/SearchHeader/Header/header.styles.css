@@ -1,0 +1,100 @@
+.header-view-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--primary200);
+  height: fit-content;
+  flex: 1;
+}
+.header-view-left-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: fit-content;
+}
+
+.header-view-right-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 2%;
+  height: fit-content;
+}
+.header-view-right-container-parent {
+  display: flex;
+  width: 68%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-view-right-container-left {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: inherit;
+  border: 1px solid var(--custom);
+  border-radius: 10px;
+  color: var(--custom);
+}
+
+.header-view-right-container-left:hover {
+  border: 1px solid var(--custom);
+  background-color: var(--primary300);
+  color: var(--primary100);
+}
+
+.header-view-left-count-label {
+  color: var(--custom);
+  font-size: var(--subHeading);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.header-view-left-count-label-child {
+  color: var(--custom);
+  font-size: var(--subHeading);
+  font-weight: 300;
+  text-decoration: none !important;
+}
+.header-view-select-section {
+  width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .header-view-left-container {
+    display: none;
+  }
+
+  .header-view-right-container {
+    display: flex;
+    flex-direction: row;
+
+    height: fit-content;
+  }
+  .header-view-right-container-parent {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-view-right-container-left {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: inherit;
+    border: 1px solid var(--custom);
+    border-radius: 10px;
+    color: var(--custom);
+  }
+  .header-view-select-section {
+    width: 60%;
+  }
+  .header-view-right-container-left:hover {
+    border: 1px solid var(--custom);
+    background-color: var(--primary300);
+    color: var(--primary100);
+  }
+}

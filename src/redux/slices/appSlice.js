@@ -4,6 +4,8 @@ const initialState = {
   loading: false,
   error: [],
   crousalsData: [],
+  searchHeaderHeight: 0,
+  searchViewHeight: 0,
   searchSidebarHeight: 0,
   mainHeaderHeight: 0,
   crousalHeight: 0,
@@ -26,6 +28,16 @@ const appSettingSlice = createSlice({
     },
     updateSearchSideBarHeight: (state, action) => {
       state.searchSidebarHeight = action.payload;
+    },
+    updateSearchHeaderHeight: (state, action) => {
+      state.searchHeaderHeight = action.payload;
+    },
+    updateSearchViewHeight: (state, action) => {
+      state.searchViewHeight =
+        action.payload -
+        state.searchHeaderHeight -
+        state.crousalHeight -
+        state.mainHeaderHeight;
     },
     updateMainHeaderHeight: (state, action) => {
       state.mainHeaderHeight = action.payload;
@@ -104,5 +116,7 @@ export const {
   updateSearchSidebarData,
   editSearchSidebarData,
   toggleFiler,
+  updateSearchHeaderHeight,
+  updateSearchViewHeight,
 } = appSettingSlice.actions;
 export default appSettingSlice.reducer;

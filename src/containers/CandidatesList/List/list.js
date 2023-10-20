@@ -5,7 +5,11 @@ import CandidateInfo from "../CandidateInfo";
 const List = () => {
   //console.log(candidateData);
   return (
-    <div>
+    <div style={{ display: "flex", flex: 1, flexDirection: "column" }}>
+      <CandidateInfo {...candidateData[0]} />
+      <CandidateInfo {...candidateData[0]} />
+      <CandidateInfo {...candidateData[0]} />
+      <CandidateInfo {...candidateData[0]} />
       <CandidateInfo {...candidateData[0]} />
       <CandidateInfo {...candidateData[0]} />
       <CandidateInfo {...candidateData[0]} />

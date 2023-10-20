@@ -1,0 +1,19 @@
+.menu-layout-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--main);
+}
+.menu-layout-nav-container {
+  box-sizing: border-box;
+}
+
+.menu-layout-crousal-container {
+  box-sizing: border-box;
+}
+.menu-layout-view-container {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  background-color: var(--main);
+}

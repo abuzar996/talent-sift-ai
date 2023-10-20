@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./searchSidebar.styles.css";
 import Heading from "./Sections/Headings/heading";
 import { searchSideData } from "../../constants/searchSidebar";
 import { useDimentions } from "../../hooks/useDimensions";
@@ -29,7 +30,7 @@ const SearchSidebar = () => {
   }, [windowSize, crousalHeight, mainHeaderHeight, dispatch]);
 
   return (
-    <div>
+    <div className="search-side-bar-main-container">
       {sideBarData.length > 0 &&
         sideBarData.map((data) => <Heading key={data.id_} {...data} />)}
     </div>
