@@ -26,6 +26,7 @@ const CustomSelect = (onChange) => {
   ]);
   return (
     <Select
+      className="custom-select-container-main"
       styles={{ display: "flex" }}
       options={options}
       defaultValue={options[0]}

@@ -2,12 +2,17 @@ import React, { useRef, useEffect } from "react";
 import { useDimentions } from "../../../hooks/useDimensions";
 import "./header.styles.css";
 import CustomSelect from "../Select";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { BiSolidDownload } from "react-icons/bi";
+import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
 import { AiFillEdit } from "react-icons/ai";
-import { updateSearchHeaderHeight } from "../../../redux/slices/appSlice";
+import {
+  updateSearchHeaderHeight,
+  toggleSidebar,
+} from "../../../redux/slices/appSlice";
 const Header = () => {
   const Ref = useRef();
+  const { sideBarOpen } = useSelector((state) => state.app);
   const dispatch = useDispatch();
   const windowSize = useDimentions();
 
@@ -19,8 +24,19 @@ const Header = () => {
   function onHandleChange(event) {
     console.log(event);
   }
+  function onSidebarOpenIconClick() {
+    dispatch(toggleSidebar());
+  }
   return (
     <div ref={Ref} className="header-view-container">
+      {!sideBarOpen && (
+        <div
+          className="header-view-left-container-sidebar-click"
+          onClick={onSidebarOpenIconClick}
+        >
+          <BsReverseLayoutTextSidebarReverse />
+        </div>
+      )}
       <div className="header-view-left-container">
         <label className="header-view-left-count-label">
           12.9k{" "}

@@ -1,4 +1,4 @@
-//import { useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 //import { countries } from "countries-list";
 //import { useSelector } from "react-redux";
@@ -14,6 +14,9 @@ import MenuLayout from "./layouts/searchLayout";
 //import Select from "./containers/SearchHeader/Select";
 //import Avatar from "./components/Avatar";
 function App() {
+  useEffect(() => {
+    //alert(window.screen.height);
+  }, []);
   // let options = ["helo", "123", "CYYY"]; //console.log(countries);
   // const { searchSidebarHeight } = useSelector((state) => state.app);
 

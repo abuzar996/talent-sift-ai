@@ -11,7 +11,7 @@ import { useDimentions } from "../../hooks/useDimensions";
 const SearchLayout = () => {
   const dispatch = useDispatch();
   const windowSize = useDimentions();
-  const { searchSidebarHeight, searchViewHeight } = useSelector(
+  const { searchSidebarHeight, searchViewHeight, sideBarOpen } = useSelector(
     (state) => state.app
   );
 
@@ -23,13 +23,23 @@ const SearchLayout = () => {
     <MenuLayout>
       <div className="search-layout-main-contianer">
         <div
-          className="search-layout-sidebar-container"
+          className={
+            sideBarOpen
+              ? "search-layout-sidebar-container"
+              : "search-layout-sidebar-container-none"
+          }
           style={{ height: `${searchSidebarHeight}px`, overflowY: "scroll" }}
         >
           <SearchSidebar />
         </div>
 
-        <div className="search-layout-views-container">
+        <div
+          className={
+            sideBarOpen
+              ? "search-layout-views-container"
+              : "search-layout-views-container-full"
+          }
+        >
           <div>
             <SearchHeader />
           </div>

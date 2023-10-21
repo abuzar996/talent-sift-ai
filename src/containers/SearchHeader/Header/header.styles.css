@@ -61,6 +61,21 @@
   width: 40%;
 }
 
+.header-view-left-container-sidebar-click {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--custom);
+  border: 1px solid var(--custom);
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 10px;
+}
+.header-view-left-container-sidebar-click:hover {
+  border: 1px solid var(--custom);
+  background-color: var(--primary300);
+  color: var(--primary100);
+}
 @media screen and (max-width: 768px) {
   .header-view-left-container {
     display: none;
