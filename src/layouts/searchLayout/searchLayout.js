@@ -8,6 +8,26 @@ import SearchHeader from "../../containers/SearchHeader";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSearchViewHeight } from "../../redux/slices/appSlice";
 import { useDimentions } from "../../hooks/useDimensions";
+import Overlay from "../../containers/Overlay";
+
+const MainView = ({ searchViewHeight }) => {
+  return (
+    <Overlay>
+      <div>
+        <SearchHeader />
+      </div>
+      <div
+        style={{
+          height: `${searchViewHeight}px`,
+          overflowY: "scroll",
+        }}
+      >
+        <CandidateInfo />
+      </div>
+    </Overlay>
+  );
+};
+
 const SearchLayout = () => {
   const dispatch = useDispatch();
   const windowSize = useDimentions();
@@ -40,6 +60,7 @@ const SearchLayout = () => {
               : "search-layout-views-container-full"
           }
         >
+          {/* <MainView searchViewHeight={searchViewHeight} /> */}
           <div>
             <SearchHeader />
           </div>

@@ -5,6 +5,7 @@
   margin: 0px;
   flex: 1;
   position: relative;
+  background-color: var(--main);
 }
 
 @media screen and (min-width: 1024px) {
@@ -21,6 +22,7 @@
     width: 75%;
     margin: 0;
     padding: 0;
+    background-color: var(--main);
   }
 }
 
