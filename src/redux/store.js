@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import appReducer from "./slices/appSlice";
-
+import modalReducer from "./slices/modals";
 export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -8,5 +8,6 @@ export const store = configureStore({
     }),
   reducer: {
     app: appReducer,
+    modal: modalReducer,
   },
 });

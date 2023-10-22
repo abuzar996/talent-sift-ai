@@ -7,7 +7,7 @@ const List = () => {
   return (
     <div className="candidate-list-container">
       {candidateData.map((candidate) => (
-        <CandidateInfo key={candidate.id_} {...candidate} />
+        <CandidateInfo key={candidate.id} {...candidate} />
       ))}
     </div>
   );

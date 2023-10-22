@@ -10,9 +10,11 @@ import "./App.css";
 //import InfoCard from "./containers/ExperienceInfoCard";
 //import CandidateInfo from "./containers/CandidatesList/List";
 //import Header from "./containers/SearchHeader/Header";
-import MenuLayout from "./layouts/searchLayout";
+//import MenuLayout from "./layouts/searchLayout";
 //import Select from "./containers/SearchHeader/Select";
 //import Avatar from "./components/Avatar";
+//import ViewModalScreen from "./modals/ViewInfoModal/viewModalscreen";
+import CustomTable from "./containers/CustomTable";
 function App() {
   useEffect(() => {
     //alert(window.screen.height);
@@ -22,7 +24,8 @@ function App() {
 
   return (
     <div className="App theme layout no-highlight">
-      <MenuLayout />
+      {/* <MenuLayout /> */}
+      <CustomTable />
     </div>
   );
 }
