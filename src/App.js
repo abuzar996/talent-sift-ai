@@ -14,6 +14,7 @@ import "./App.css";
 //import Select from "./containers/SearchHeader/Select";
 //import Avatar from "./components/Avatar";
 //import ViewModalScreen from "./modals/ViewInfoModal/viewModalscreen";
+import Priority from "./containers/Priority";
 import CustomTable from "./containers/CustomTable";
 function App() {
   useEffect(() => {
@@ -25,7 +26,9 @@ function App() {
   return (
     <div className="App theme layout no-highlight">
       {/* <MenuLayout /> */}
-      <CustomTable />
+      <CustomTable>
+        <Priority priority={"low"} />
+      </CustomTable>
     </div>
   );
 }

@@ -1,0 +1,39 @@
+.low-priority-candidate-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  gap: 5px;
+  padding: 10px;
+}
+
+.low-priority-candidate-container-remarks {
+  display: flex;
+  flex-direction: row;
+
+  padding: 10px;
+  gap: 5px;
+}
+.low-priority-candidate-container-icon {
+  color: var(--orange);
+
+  border-radius: 50%;
+}
+.low-priority-candidate-container-label {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--orange);
+}
+.low-priority-status-review {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.low-div-for-priority-candidate {
+  display: flex;
+  width: 15px;
+  border: 3px solid var(--orange);
+  border-radius: 10px;
+}
