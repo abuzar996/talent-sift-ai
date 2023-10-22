@@ -5,15 +5,10 @@ import CandidateInfo from "../CandidateInfo";
 const List = () => {
   //console.log(candidateData);
   return (
-    <div style={{ display: "flex", flex: 1, flexDirection: "column" }}>
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
-      <CandidateInfo {...candidateData[0]} />
+    <div className="candidate-list-container">
+      {candidateData.map((candidate) => (
+        <CandidateInfo key={candidate.id_} {...candidate} />
+      ))}
     </div>
   );
 };
