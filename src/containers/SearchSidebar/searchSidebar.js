@@ -10,7 +10,6 @@ import {
   updateSearchSidebarData,
   toggleSidebar,
 } from "../../redux/slices/appSlice";
-//import Overlay from "../Overlay";
 const SearchSidebar = () => {
   const dispatch = useDispatch();
 

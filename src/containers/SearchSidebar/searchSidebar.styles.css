@@ -2,6 +2,7 @@
   width: 100%;
   background-color: var(--main);
 }
+
 .search-side-bar-main-header {
   display: flex;
   flex-direction: row;
