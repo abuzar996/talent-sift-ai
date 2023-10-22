@@ -18,6 +18,7 @@
   flex-direction: column;
   flex: 1;
   overflow-y: scroll;
+  background-color: var(--main);
   padding: 10px;
   box-shadow: 1px 1px 5px gray;
 }

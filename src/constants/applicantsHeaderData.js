@@ -9,7 +9,7 @@ export const applicantsHeader = [
   {
     id_: 2,
     title: "Candidate",
-    flex: "2",
+    flex: "1.5",
     color: "green",
     justifyContent: "flex-start",
   },

@@ -1,0 +1,7 @@
+.applicant-info-single-row-container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--main);
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--custom);
+}

@@ -1,0 +1,21 @@
+.detail-column-custom-table-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.detail-column-custom-table-icons {
+  padding: 10px;
+  background-color: var(--custom);
+  border-radius: 50%;
+  color: var(--main);
+}
+
+.detail-column-custom-table-icons:hover {
+  background-color: var(--primary300);
+  color: var(--primary100);
+}

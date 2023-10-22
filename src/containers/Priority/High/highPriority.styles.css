@@ -5,14 +5,14 @@
   flex: 1;
   width: 100%;
   gap: 5px;
-  padding: 10px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .high-priority-candidate-container-remarks {
   display: flex;
   flex-direction: row;
 
-  padding: 10px;
   gap: 5px;
 }
 .high-priority-candidate-container-icon {
@@ -26,7 +26,6 @@
   color: var(--green);
 }
 .high-priority-status-review {
-  padding-left: 10px;
   display: flex;
   flex-direction: row;
   gap: 5px;

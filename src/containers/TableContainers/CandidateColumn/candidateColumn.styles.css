@@ -1,0 +1,25 @@
+.candidate-table-column-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: var(--main);
+  justify-content: center;
+  gap: 2px;
+}
+.candidate-table-column-name {
+  font-size: var(--subHeading);
+  text-wrap: wrap;
+  font-weight: 500;
+  color: var(--textSecondary);
+}
+.candidate-table-column-location {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  color: var(--custom);
+  font-size: var(--miniText);
+}
+
+.candidate-table-column-text-decoration {
+  text-decoration: underline;
+}
