@@ -142,3 +142,13 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.custom-header-label-universal {
+  display: flex;
+  text-wrap: wrap;
+  text-decoration: underline;
+  font-weight: 600;
+  color: var(--main);
+  font-size: var(--textTag);
+  padding-left: 10px;
+}

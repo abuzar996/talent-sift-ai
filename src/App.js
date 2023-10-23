@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-import ApplicantList from "./containers/ApplicantsTable/ApplicantList";
+//import ApplicantList from "./containers/ApplicantsTable/ApplicantList";
 //import { countries } from "countries-list";
 //import { useSelector } from "react-redux";
 //import Crousal from "./containers/Crousal";
@@ -11,14 +11,15 @@ import ApplicantList from "./containers/ApplicantsTable/ApplicantList";
 //import InfoCard from "./containers/ExperienceInfoCard";
 //import CandidateInfo from "./containers/CandidatesList/List";
 //import Header from "./containers/SearchHeader/Header";
-//import MenuLayout from "./layouts/searchLayout";
+import MenuLayout from "./layouts/menuLayout";
+import SearchLayout from "./layouts/searchLayout";
 //import Select from "./containers/SearchHeader/Select";
 //import Avatar from "./components/Avatar";
 //import ViewModalScreen from "./modals/ViewInfoModal/viewModalscreen";
 //import Priority from "./containers/Priority";
 //import CandidateColumn from "./containers/TableContainers/CandidateColumn";
-import DetailColumn from "./containers/TableContainers/ImageColumn";
-import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo";
+//import DetailColumn from "./containers/TableContainers/ImageColumn";
+//import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo";
 import CustomTable from "./containers/CustomTable";
 function App() {
   useEffect(() => {
@@ -29,10 +30,10 @@ function App() {
 
   return (
     <div className="App theme layout no-highlight">
-      {/* <MenuLayout /> */}
-      <CustomTable>
-        <ApplicantList />{" "}
-      </CustomTable>
+      <MenuLayout>
+        <SearchLayout />
+      </MenuLayout>
+      {/* <CustomTable /> */}
     </div>
   );
 }

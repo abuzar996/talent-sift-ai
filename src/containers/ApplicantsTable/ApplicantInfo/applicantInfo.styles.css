@@ -5,7 +5,6 @@
   box-sizing: border-box;
 
   justify-content: space-between;
-  position: relative;
 }
 .applicant-info-single-row-container-button {
   font-size: var(--miniText);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./searchLayout.styles.css";
 import SearchSidebar from "../../containers/SearchSidebar";
-import MenuLayout from "../menuLayout";
+
 import CandidateInfo from "../../containers/CandidatesList";
 import SearchHeader from "../../containers/SearchHeader";
 import { useSelector, useDispatch } from "react-redux";
@@ -67,39 +67,37 @@ const SearchLayout = () => {
   }
 
   return (
-    <MenuLayout>
-      <div className="search-layout-main-contianer">
-        {overlayEnabled && sideBarOpen ? (
-          <Overlay onClick={updateSearchBarVisibility}>
-            <MainView
-              searchSidebarHeight={searchSidebarHeight}
-              modalAnimation={modalAnimation}
-              sideBarOpen={sideBarOpen}
-            />
-          </Overlay>
-        ) : (
+    <div className="search-layout-main-contianer">
+      {overlayEnabled && sideBarOpen ? (
+        <Overlay onClick={updateSearchBarVisibility}>
           <MainView
             searchSidebarHeight={searchSidebarHeight}
             modalAnimation={modalAnimation}
             sideBarOpen={sideBarOpen}
           />
-        )}
-        <div
-          className={
-            sideBarOpen
-              ? "search-layout-views-container"
-              : "search-layout-views-container-full"
-          }
-        >
-          <div>
-            <SearchHeader />
-          </div>
-          <div style={{ height: `${searchViewHeight}px`, overflowY: "scroll" }}>
-            <CandidateInfo />
-          </div>
+        </Overlay>
+      ) : (
+        <MainView
+          searchSidebarHeight={searchSidebarHeight}
+          modalAnimation={modalAnimation}
+          sideBarOpen={sideBarOpen}
+        />
+      )}
+      <div
+        className={
+          sideBarOpen
+            ? "search-layout-views-container"
+            : "search-layout-views-container-full"
+        }
+      >
+        <div>
+          <SearchHeader />
+        </div>
+        <div style={{ height: `${searchViewHeight}px`, overflowY: "scroll" }}>
+          <CandidateInfo />
         </div>
       </div>
-    </MenuLayout>
+    </div>
   );
 };
 

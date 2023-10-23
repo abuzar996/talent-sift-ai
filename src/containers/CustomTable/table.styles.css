@@ -2,10 +2,9 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  overflow-x: scroll;
+
   flex: 1;
   padding: 10px;
-  overflow-x: scroll;
 }
 
 .custom-table-container-header {
@@ -13,6 +12,8 @@
   background-color: var(--custom);
   flex-direction: row;
   padding: 10px;
+  overflow-x: scroll;
+  flex: 1;
 }
 
 .custom-table-container-body {
@@ -20,9 +21,8 @@
   flex-direction: column;
   flex: 1;
   overflow-y: scroll;
-  overflow-x: scroll;
   background-color: var(--main);
-  padding: 10px;
+  overflow-x: scroll;
   box-shadow: 1px 1px 5px gray;
 }
 
@@ -30,7 +30,6 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  flex: 1;
 }
 
 .custom-table-container-header-child > label {
@@ -61,4 +60,45 @@
 
 .custom-table-footer-previous-icon:hover {
   background-color: var(--primary300);
+}
+
+.custom-table-parent-component {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+.custom-table-head-component {
+  display: table-header-group;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 10px;
+  background-color: var(--custom);
+}
+
+.custom-table-container-head-row-component {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.custom-table-container-body-row-component {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-table-container-body-component {
+  overflow-y: scroll;
+}
+
+.custom-table-row-table {
+  background-color: var(--custom);
 }

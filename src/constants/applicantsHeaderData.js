@@ -5,6 +5,7 @@ export const applicantsHeader = [
     flex: "0.5",
     justifyContent: "flex-start",
     color: "red",
+    backgroundColor: "red",
   },
   {
     id_: 2,
@@ -12,6 +13,7 @@ export const applicantsHeader = [
     flex: "1.5",
     color: "green",
     justifyContent: "flex-start",
+    backgroundColor: "green",
   },
   {
     id_: 3,
@@ -19,6 +21,7 @@ export const applicantsHeader = [
     flex: "1",
     color: "blue",
     justifyContent: "flex-start",
+    backgroundColor: "orange",
   },
   {
     id_: 4,
@@ -26,6 +29,7 @@ export const applicantsHeader = [
     flex: "1",
     color: "yellow",
     justifyContent: "flex-start",
+    backgroundColor: "blue",
   },
   {
     id_: 5,
@@ -33,6 +37,7 @@ export const applicantsHeader = [
     flex: "1",
     color: "orange",
     justifyContent: "flex-start",
+    backgroundColor: "orange",
   },
   {
     id_: 6,
@@ -40,6 +45,7 @@ export const applicantsHeader = [
     flex: "1",
     color: "white",
     justifyContent: "flex-start",
+    backgroundColor: "purple",
   },
   {
     id_: 7,
@@ -47,5 +53,6 @@ export const applicantsHeader = [
     flex: "1",
     color: "purple",
     justifyContent: "center",
+    backgroundColor: "aqua",
   },
 ];
