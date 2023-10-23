@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
+import ApplicantList from "./containers/ApplicantsTable/ApplicantList";
 //import { countries } from "countries-list";
 //import { useSelector } from "react-redux";
 //import Crousal from "./containers/Crousal";
@@ -30,17 +31,7 @@ function App() {
     <div className="App theme layout no-highlight">
       {/* <MenuLayout /> */}
       <CustomTable>
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
-        <ApplicantInfo />
+        <ApplicantList />{" "}
       </CustomTable>
     </div>
   );

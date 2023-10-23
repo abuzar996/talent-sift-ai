@@ -1,13 +1,16 @@
 .candidate-table-column-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
+
   background-color: var(--main);
+  padding-left: 10px;
+  padding-right: 10px;
   justify-content: center;
   gap: 2px;
+  width: 250px;
 }
 .candidate-table-column-name {
-  font-size: var(--subHeading);
+  font-size: var(--textTag);
   text-wrap: wrap;
   font-weight: 500;
   color: var(--textSecondary);

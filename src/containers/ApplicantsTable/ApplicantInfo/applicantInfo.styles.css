@@ -3,5 +3,10 @@
   flex-direction: row;
   background-color: var(--main);
   box-sizing: border-box;
-  border-bottom: 1px solid var(--custom);
+
+  justify-content: space-between;
+  position: relative;
+}
+.applicant-info-single-row-container-button {
+  font-size: var(--miniText);
 }

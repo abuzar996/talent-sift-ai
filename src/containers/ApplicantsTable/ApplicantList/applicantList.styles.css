@@ -1,0 +1,11 @@
+.applicant-list-table-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.applicant-list-table-container-header {
+  display: flex;
+  background-color: var(--custom);
+  flex-direction: row;
+  padding: 10px;
+}
