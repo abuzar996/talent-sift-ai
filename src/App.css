@@ -86,7 +86,7 @@
     --text: 14px;
     --textCrousal: 12px;
     --textTag: 11px;
-    --miniText: 11px;
+    --miniText: 9px;
     position: fixed;
   }
 }

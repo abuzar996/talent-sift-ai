@@ -1,26 +1,9 @@
 import { useEffect } from "react";
 import "./App.css";
-//import ApplicantList from "./containers/ApplicantsTable/ApplicantList";
-//import { countries } from "countries-list";
-//import { useSelector } from "react-redux";
-//import Crousal from "./containers/Crousal";
-//import Nav from "./containers/Nav";
-//import SearchSidebar from "./containers/SearchSidebar";
-//import Select from "./components/Select";
-//import Select from "react-select";
-//import InfoCard from "./containers/ExperienceInfoCard";
-//import CandidateInfo from "./containers/CandidatesList/List";
-//import Header from "./containers/SearchHeader/Header";
-import MenuLayout from "./layouts/menuLayout";
-import SearchLayout from "./layouts/searchLayout";
-//import Select from "./containers/SearchHeader/Select";
-//import Avatar from "./components/Avatar";
-//import ViewModalScreen from "./modals/ViewInfoModal/viewModalscreen";
-//import Priority from "./containers/Priority";
-//import CandidateColumn from "./containers/TableContainers/CandidateColumn";
-//import DetailColumn from "./containers/TableContainers/ImageColumn";
-//import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo";
-import CustomTable from "./containers/CustomTable";
+import CustomTable from "./containers/CustomTable/table";
+import { applicantInfo } from "./constants/applicantsInfo";
+import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo";
+
 function App() {
   useEffect(() => {
     //alert(window.screen.height);
@@ -30,10 +13,16 @@ function App() {
 
   return (
     <div className="App theme layout no-highlight">
-      <MenuLayout>
+      {/* <MenuLayout>
         <SearchLayout />
-      </MenuLayout>
-      {/* <CustomTable /> */}
+        <
+      </MenuLayout> */}
+      <div style={{ display: "flex", flex: 1 }}>
+        <CustomTable>
+          <ApplicantInfo data={applicantInfo} />
+        </CustomTable>
+        {/* <ApplicantInfo data={applicantInfo} /> */}
+      </div>
     </div>
   );
 }

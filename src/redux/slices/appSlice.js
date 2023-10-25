@@ -11,6 +11,7 @@ const initialState = {
   crousalHeight: 0,
   sideBarData: [],
   sideBarOpen: true,
+  tableWidth: 0,
 };
 
 const appSettingSlice = createSlice({
@@ -22,6 +23,9 @@ const appSettingSlice = createSlice({
     },
     toggleSidebar: (state) => {
       state.sideBarOpen = !state.sideBarOpen;
+    },
+    setTableWidth: (state, action) => {
+      state.tableWidth = action.payload;
     },
     updateData: (state, action) => {
       state.crousalsData.forEach((data) =>
@@ -123,5 +127,6 @@ export const {
   updateSearchHeaderHeight,
   updateSearchViewHeight,
   toggleSidebar,
+  setTableWidth,
 } = appSettingSlice.actions;
 export default appSettingSlice.reducer;

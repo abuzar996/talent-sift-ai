@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./applicantInfo.styles.css";
 import CandidateColumn from "../../TableContainers/CandidateColumn";
 import ImageColumn from "../../TableContainers/ImageColumn";
 import DetailColumn from "../../TableContainers/DetailsColumn";
 import CustomColumn from "../../TableContainers/CustomColumn/customColumn";
 import MatchColumn from "../../TableContainers/MatchColumn";
-import { applicantsHeader } from "../../../constants/applicantsHeaderData";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "../../../components/Button/button";
-import { useDispatch } from "react-redux";
 import { useDimentions } from "../../../hooks/useDimensions";
 import {
   setButtonWidth,
@@ -18,111 +17,134 @@ import {
   setCandidateWidth,
   setImageWidth,
 } from "../../../redux/slices/modals";
-//import { useDimentions } from "../../../hooks/useDimensions";
-
-const ApplicantInfo = ({
-  index,
-  name,
-  location,
-  currentPosition,
-  company,
-  priority,
-  date,
-  source,
-}) => {
+const ApplicantInfo = ({ data }) => {
+  const dispatch = useDispatch();
+  const windowSize = useDimentions();
+  const {
+    imageWidth,
+    buttonWidth,
+    candidateWidth,
+    detailWidth,
+    sourceWidth,
+    matchWidth,
+    dateWidth,
+  } = useSelector((state) => state.modal);
+  const [TableBodyHeight, setTableBodyHeight] = useState(0);
+  const Ref = useRef();
+  const headerRef = useRef();
   const imageRef = useRef();
   const candidateRef = useRef();
   const matchRef = useRef();
-  const sourceRef = useRef();
   const dateRef = useRef();
-  const detailRef = useRef();
-  const buttonRef = useRef();
-  const dispatch = useDispatch();
-  const windowSize = useDimentions();
+  const sourceRef = useRef();
+  const detailsRef = useRef();
+  const actionRef = useRef();
 
   useEffect(() => {
-    if (index === 0) {
-      dispatch(setButtonWidth(buttonRef.current.clientWidth));
-      console.log("Buton", buttonRef.current.clientWidth);
-      dispatch(setDateWidth(dateRef.current.clientWidth));
-      console.log("dateRef", dateRef.current.clientWidth);
-      dispatch(setMatchWidth(matchRef.current.clientWidth));
-      console.log("matchRef", matchRef.current.clientWidth);
-      dispatch(setDetailWidth(detailRef.current.clientWidth));
-      console.log("detailRef", detailRef.current.clientWidth);
-      dispatch(setSourceWidth(sourceRef.current.clientWidth));
-      console.log("Source", sourceRef.current.clientWidth);
-      dispatch(setCandidateWidth(candidateRef.current.clientWidth));
-      console.log("Candidate", candidateRef.current.clientWidth);
-      dispatch(setImageWidth(imageRef.current.clientWidth));
-      console.log("Image", imageRef.current.clientWidth);
-    }
-  }, [index, dispatch, windowSize]);
+    setTableBodyHeight(
+      Ref.current.clientHeight - headerRef.current.clientHeight
+    );
+  }, [headerRef, Ref, windowSize]);
+  useEffect(() => {
+    dispatch(setImageWidth(imageRef.current.clientWidth));
+  }, [imageRef, dispatch, windowSize]);
+  useEffect(() => {
+    dispatch(setCandidateWidth(candidateRef.current.clientWidth));
+  }, [candidateRef, dispatch, windowSize]);
+  useEffect(() => {
+    dispatch(setMatchWidth(matchRef.current.clientWidth));
+  }, [matchRef, dispatch, windowSize]);
+  useEffect(() => {
+    dispatch(setDateWidth(dateRef.current.clientWidth));
+  }, [dateRef, dispatch, windowSize]);
+  useEffect(() => {
+    dispatch(setSourceWidth(sourceRef.current.clientWidth));
+  }, [sourceRef, dispatch, windowSize]);
+  useEffect(() => {
+    dispatch(setDetailWidth(detailsRef.current.clientWidth));
+  }, [detailsRef, dispatch, windowSize]);
+
+  useEffect(() => {
+    dispatch(setButtonWidth(actionRef.current.clientWidth));
+  }, [actionRef, dispatch, windowSize]);
   return (
-    <div className="applicant-info-single-row-container">
-      <div
-        ref={imageRef}
-        style={{ display: "flex", flex: applicantsHeader[0].flex }}
-      >
-        <ImageColumn />
-      </div>
-      <div
-        ref={candidateRef}
-        style={{ display: "flex", flex: applicantsHeader[1].flex }}
-      >
-        <CandidateColumn
-          name={name}
-          location={location}
-          currentPosition={currentPosition}
-          company={company}
-        />
-      </div>
-      <div
-        ref={matchRef}
-        style={{
-          display: "flex",
-          flex: applicantsHeader[2].flex,
-        }}
-      >
-        <MatchColumn priority={priority} />
-      </div>
-      <div
-        ref={dateRef}
-        style={{
-          display: "flex",
-          flex: applicantsHeader[3].flex,
-        }}
-      >
-        <CustomColumn data={date} />
-      </div>
-      <div
-        ref={sourceRef}
-        style={{
-          display: "flex",
-          flex: applicantsHeader[4].flex,
-        }}
-      >
-        <CustomColumn data={source} />
-      </div>
-      <div
-        ref={detailRef}
-        style={{ display: "flex", flex: applicantsHeader[5].flex }}
-      >
-        <DetailColumn />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flex: applicantsHeader[6].flex,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+    <div ref={Ref} className="applicant-info-main-container">
+      <div>
+        <div ref={headerRef} className="applicant-info-header-inner-container">
+          <div id="header-div" className="applicant-info-header">
+            <div style={{ width: `${imageWidth}px` }}></div>
+            <div style={{ width: `${candidateWidth}px` }}>Candidate</div>
+            <div style={{ width: `${matchWidth}px` }}>Job Match</div>
+            <div style={{ width: `${dateWidth}px` }}>Date</div>
+            <div style={{ width: `${sourceWidth}px` }}>Source</div>
+            <div style={{ width: `${detailWidth}px` }}>Details</div>
+            <div style={{ width: `${buttonWidth}px` }}>Action</div>
+          </div>
+        </div>
         <div
-          ref={buttonRef}
-          className="applicant-info-single-row-container-button"
+          style={{
+            display: windowSize.width <= 768 ? "inline-block" : "flex",
+            flexDirection: "column",
+            height: `${TableBodyHeight}px`,
+            overflowY: "scroll",
+          }}
         >
-          <Button>Advance</Button>
+          {data.map((d, i) => (
+            <div key={d.id_} className="applicant-info-inner-container">
+              <div className="applicant-info-single-row-container">
+                <div
+                  ref={imageRef}
+                  className="applicant-info-single-candidate-container"
+                >
+                  <ImageColumn />
+                </div>
+
+                <div
+                  ref={candidateRef}
+                  className="applicant-info-single-candidate-container"
+                >
+                  <CandidateColumn
+                    name={d.name}
+                    location={d.location}
+                    currentPosition={d.currentPosition}
+                    company={d.company}
+                  />
+                </div>
+                <div
+                  ref={matchRef}
+                  className="applicant-info-single-candidate-container"
+                >
+                  <MatchColumn priority={d.priority} />
+                </div>
+                <div
+                  ref={dateRef}
+                  className="applicant-info-single-candidate-container"
+                >
+                  <CustomColumn data={d.date} />
+                </div>
+                <div
+                  ref={sourceRef}
+                  className="applicant-info-single-candidate-container"
+                >
+                  <CustomColumn data={d.source} />
+                </div>
+                <div
+                  ref={detailsRef}
+                  className="applicant-info-single-candidate-container"
+                >
+                  <DetailColumn />
+                </div>
+                <div
+                  ref={actionRef}
+                  className="applicant-info-single-candidate-container-button-div"
+                >
+                  <div className="applicant-info-single-row-container-button">
+                    <Button>Advance</Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

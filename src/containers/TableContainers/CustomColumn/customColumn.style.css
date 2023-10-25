@@ -3,16 +3,14 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  /* width: 200px; */
-
-  /* background-color: var(--main); */
+  flex: 1;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .source-column-custom-table-container > label {
-  text-wrap: wrap;
+  text-overflow: wrap;
   font-size: var(--miniText);
   font-weight: 400;
-  color: var(--textSecondary);
+  color: var(--custom);
 }

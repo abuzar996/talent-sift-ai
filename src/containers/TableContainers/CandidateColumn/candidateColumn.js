@@ -19,6 +19,7 @@ const CandidateColumn = ({ name, location, currentPosition, company }) => {
         <div>
           <AiFillFolder />
         </div>
+
         <label className="candidate-table-column-text-decoration">
           {currentPosition}
         </label>
