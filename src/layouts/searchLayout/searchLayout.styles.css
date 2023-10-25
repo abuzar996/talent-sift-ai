@@ -4,6 +4,7 @@
   padding: 0px;
   margin: 0px;
   flex: 1;
+  height: 100%;
   position: relative;
   background-color: var(--main);
 }
@@ -54,6 +55,7 @@
     background-color: var(--main);
     z-index: 100;
     width: 100%;
+
     box-shadow: 2px 2px 2px 2px var(--custom);
     margin: 0;
     padding: 0;

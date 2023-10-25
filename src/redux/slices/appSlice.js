@@ -6,6 +6,8 @@ const initialState = {
   crousalsData: [],
   searchHeaderHeight: 0,
   searchViewHeight: 0,
+  tableViewHeight: 0,
+  tableBodyHeight: 0,
   searchSidebarHeight: 0,
   mainHeaderHeight: 0,
   crousalHeight: 0,
@@ -46,6 +48,22 @@ const appSettingSlice = createSlice({
         state.searchHeaderHeight -
         state.crousalHeight -
         state.mainHeaderHeight;
+    },
+    updateTableViewHeight: (state, action) => {
+      state.tableViewHeight =
+        action.payload -
+        state.searchHeaderHeight -
+        state.crousalHeight -
+        state.mainHeaderHeight;
+    },
+    updateTableBodyHeight: (state, action) => {
+      state.tableBodyHeight =
+        action.payload -
+        state.searchHeaderHeight -
+        state.crousalHeight -
+        state.mainHeaderHeight;
+
+      console.log(action.payload);
     },
     updateMainHeaderHeight: (state, action) => {
       state.mainHeaderHeight = action.payload;
@@ -128,5 +146,6 @@ export const {
   updateSearchViewHeight,
   toggleSidebar,
   setTableWidth,
+  updateTableViewHeight,
 } = appSettingSlice.actions;
 export default appSettingSlice.reducer;

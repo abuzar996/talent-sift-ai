@@ -3,6 +3,7 @@ import "./crousal.styles.css";
 import { useDimentions } from "../../hooks/useDimensions";
 import { mainCrousalData } from "../../constants/mainCrousalData";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   setData,
   updateData,
@@ -82,7 +83,8 @@ const FlexDataProvider = ({ crousalData, onClick }) => {
 
 const Crousal = () => {
   const dispatch = useDispatch();
-  const { crousalsData } = useSelector((state) => state.app);
+
+  const { crousalsData, crousalHeight } = useSelector((state) => state.app);
   const [mobileView, setMobileView] = useState(false);
 
   const windowSize = useDimentions();
@@ -91,10 +93,10 @@ const Crousal = () => {
   const Ref = useRef();
 
   useEffect(() => {
-    if (Ref) {
+    if (Ref.current.clientHeight !== crousalHeight) {
       dispatch(updateCrousalHeight(Ref.current.clientHeight));
     }
-  }, [windowSize, dispatch]);
+  }, [Ref, windowSize, dispatch, crousalHeight]);
 
   useEffect(() => {
     dispatch(setData(mainCrousalData));

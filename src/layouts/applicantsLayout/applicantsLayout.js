@@ -2,16 +2,22 @@ import React from "react";
 import SearchHeader from "../../containers/SearchHeader";
 import CustomTable from "../../containers/CustomTable/table";
 import "./applicantslayout.styles.css";
+import { applicantInfo } from "../../constants/applicantsInfo";
+import ApplicantInfo from "../../containers/ApplicantsTable/ApplicantInfo";
+import MenuLayout from "../menuLayout/menuLayout";
 const ApplicantsLayout = () => {
   return (
-    <div className="applicant-layout-container">
-      <div>
-        <SearchHeader />
+    <MenuLayout>
+      <div className="applicant-layout-container">
+        <div>
+          <SearchHeader />
+        </div>
+
+        <CustomTable>
+          <ApplicantInfo data={applicantInfo} />
+        </CustomTable>
       </div>
-      <div style={{ display: "flex", height: "650px", overflowY: "scroll" }}>
-        <CustomTable />
-      </div>
-    </div>
+    </MenuLayout>
   );
 };
 

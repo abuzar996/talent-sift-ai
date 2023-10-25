@@ -12,15 +12,17 @@ import {
 } from "../../../redux/slices/appSlice";
 const Header = () => {
   const Ref = useRef();
-  const { sideBarOpen } = useSelector((state) => state.app);
+  const { sideBarOpen, searchHeaderHeight } = useSelector((state) => state.app);
   const dispatch = useDispatch();
   const windowSize = useDimentions();
 
   useEffect(() => {
     if (Ref) {
-      dispatch(updateSearchHeaderHeight(Ref.current.clientHeight));
+      if (Ref.current.clientHeight !== searchHeaderHeight) {
+        dispatch(updateSearchHeaderHeight(Ref.current.clientHeight));
+      }
     }
-  }, [windowSize, dispatch]);
+  }, [windowSize, dispatch, searchHeaderHeight]);
   function onHandleChange(event) {
     console.log(event);
   }

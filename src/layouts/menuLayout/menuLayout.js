@@ -2,10 +2,15 @@ import React from "react";
 import "./menuLayout.styles.css";
 import Nav from "../../containers/Nav";
 import Crousal from "../../containers/Crousal/crousal";
+import { useDimentions } from "../../hooks/useDimensions";
 
 const MenuLayout = ({ children }) => {
+  const windowSize = useDimentions();
   return (
-    <div className="menu-layout-container">
+    <div
+      className="menu-layout-container"
+      style={{ height: `${windowSize.height}px` }}
+    >
       <div className="menu-layout-nav-container">
         <Nav Title={"Back"} />
       </div>

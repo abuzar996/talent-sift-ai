@@ -44,29 +44,29 @@ const ApplicantInfo = ({ data }) => {
     setTableBodyHeight(
       Ref.current.clientHeight - headerRef.current.clientHeight
     );
-  }, [headerRef, Ref, windowSize]);
+  }, [windowSize, TableBodyHeight]);
   useEffect(() => {
     dispatch(setImageWidth(imageRef.current.clientWidth));
-  }, [imageRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
   useEffect(() => {
     dispatch(setCandidateWidth(candidateRef.current.clientWidth));
-  }, [candidateRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
   useEffect(() => {
     dispatch(setMatchWidth(matchRef.current.clientWidth));
-  }, [matchRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
   useEffect(() => {
     dispatch(setDateWidth(dateRef.current.clientWidth));
-  }, [dateRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
   useEffect(() => {
     dispatch(setSourceWidth(sourceRef.current.clientWidth));
-  }, [sourceRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
   useEffect(() => {
     dispatch(setDetailWidth(detailsRef.current.clientWidth));
-  }, [detailsRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
 
   useEffect(() => {
     dispatch(setButtonWidth(actionRef.current.clientWidth));
-  }, [actionRef, dispatch, windowSize]);
+  }, [dispatch, windowSize]);
   return (
     <div ref={Ref} className="applicant-info-main-container">
       <div>
@@ -93,6 +93,7 @@ const ApplicantInfo = ({ data }) => {
             <div key={d.id_} className="applicant-info-inner-container">
               <div className="applicant-info-single-row-container">
                 <div
+                  id="image-container-1"
                   ref={imageRef}
                   className="applicant-info-single-candidate-container"
                 >
@@ -100,6 +101,7 @@ const ApplicantInfo = ({ data }) => {
                 </div>
 
                 <div
+                  id="candidate-container-1"
                   ref={candidateRef}
                   className="applicant-info-single-candidate-container"
                 >
@@ -111,30 +113,35 @@ const ApplicantInfo = ({ data }) => {
                   />
                 </div>
                 <div
+                  id="match-container-1"
                   ref={matchRef}
                   className="applicant-info-single-candidate-container"
                 >
                   <MatchColumn priority={d.priority} />
                 </div>
                 <div
+                  id="date-container-1"
                   ref={dateRef}
                   className="applicant-info-single-candidate-container"
                 >
                   <CustomColumn data={d.date} />
                 </div>
                 <div
+                  id="source-container-1"
                   ref={sourceRef}
                   className="applicant-info-single-candidate-container"
                 >
                   <CustomColumn data={d.source} />
                 </div>
                 <div
+                  id="detail-container-1"
                   ref={detailsRef}
                   className="applicant-info-single-candidate-container"
                 >
                   <DetailColumn />
                 </div>
                 <div
+                  id="action-container-1"
                   ref={actionRef}
                   className="applicant-info-single-candidate-container-button-div"
                 >

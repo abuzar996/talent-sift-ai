@@ -3,6 +3,8 @@
   flex-direction: column;
   flex: 1;
   background-color: var(--main);
+
+  height: 100%;
 }
 .menu-layout-nav-container {
   box-sizing: border-box;

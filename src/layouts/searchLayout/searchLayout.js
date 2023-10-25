@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import "./searchLayout.styles.css";
 import SearchSidebar from "../../containers/SearchSidebar";
@@ -33,13 +33,20 @@ const MainView = ({ searchSidebarHeight, modalAnimation, sideBarOpen }) => {
 };
 
 const SearchLayout = () => {
+  const Ref = useRef(null);
   const dispatch = useDispatch();
   const windowSize = useDimentions();
+
   const [sidebarWidth, setSidbarWidth] = useState(0);
   const [overlayEnabled, setOverLayEnnabled] = useState(false);
-  const { searchSidebarHeight, searchViewHeight, sideBarOpen } = useSelector(
-    (state) => state.app
-  );
+  const {
+    searchSidebarHeight,
+    searchViewHeight,
+    crousalHeight,
+    searchHeaderHeight,
+    mainHeaderHeight,
+    sideBarOpen,
+  } = useSelector((state) => state.app);
 
   useEffect(() => {
     if (windowSize.width >= 1024) {
@@ -60,7 +67,14 @@ const SearchLayout = () => {
 
   useEffect(() => {
     dispatch(updateSearchViewHeight(windowSize.height));
-  }, [windowSize, dispatch]);
+  }, [
+    windowSize,
+    dispatch,
+    searchViewHeight,
+    searchHeaderHeight,
+    mainHeaderHeight,
+    crousalHeight,
+  ]);
 
   function updateSearchBarVisibility() {
     dispatch(toggleSidebar());
@@ -93,7 +107,10 @@ const SearchLayout = () => {
         <div>
           <SearchHeader />
         </div>
-        <div style={{ height: `${searchViewHeight}px`, overflowY: "scroll" }}>
+        <div
+          ref={Ref}
+          style={{ height: `${searchViewHeight}px`, overflowY: "scroll" }}
+        >
           <CandidateInfo />
         </div>
       </div>
