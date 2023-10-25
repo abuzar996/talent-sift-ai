@@ -3,11 +3,11 @@
   flex-direction: row;
   padding: 10px;
   justify-content: space-between;
+  background-color: var(--main);
 }
 .nav-left-container {
   display: flex;
   flex: 1;
-
   column-gap: 10px;
 }
 .nav-left-container > div {
@@ -16,7 +16,7 @@
 }
 
 .nav-left-container > div > label {
-  font-size: var(--heading);
+  font-size: var(--subHeading);
   font-weight: 400;
   color: var(--textSecondary);
 }

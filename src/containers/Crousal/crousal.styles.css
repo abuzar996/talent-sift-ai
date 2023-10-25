@@ -1,9 +1,13 @@
 .crousal-container {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   flex-direction: row;
   padding: 10px;
+  background-color: var(--custom);
+}
+
+.crousal-container-mobile {
+  display: block;
 }
 .crousal-flex-items {
   box-sizing: border-box;

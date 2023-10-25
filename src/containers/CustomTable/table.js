@@ -40,7 +40,7 @@ const CustomTable = ({ children }) => {
     <div
       ref={Ref}
       className="custom-table-container"
-      style={{ maxHeight: `${tableViewHeight}px` }}
+      style={{ height: `${tableViewHeight}px` }}
     >
       <div
         className="custom-table-container-body"

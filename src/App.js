@@ -1,26 +1,22 @@
 import { useEffect } from "react";
 import "./App.css";
-import MenuLayout from "./layouts/menuLayout/menuLayout";
-import SearchLayout from "./layouts/searchLayout";
-import ApplicantsLayout from "./layouts/applicantsLayout";
+//import MenuLayout from "./layouts/menuLayout/menuLayout";
+//import SearchLayout from "./layouts/searchLayout";
+//import ApplicantsLayout from "./layouts/applicantsLayout";
 import { useDimentions } from "./hooks/useDimensions";
-import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo/applicantInfo";
-import CustomTable from "./containers/CustomTable/table";
-// import CustomTable from "./containers/CustomTable/table";
-// import { applicantInfo } from "./constants/applicantsInfo";
-// import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo";
-// import ApplicantsLayout from "./layouts/applicantsLayout/applicantsLayout";
+// import ApplicantInfo from "./containers/ApplicantsTable/ApplicantInfo/applicantInfo";
+import AtsTable from "./containers/AtsTable";
+//import Applayout from "./layouts/AppLayout";
+//import CustomTable from "./containers/CustomTable/table";
 
 function App() {
+  const windowSize = useDimentions();
   useEffect(() => {
-    //alert(window.screen.height);
-  }, []);
-  // let options = ["helo", "123", "CYYY"]; //console.log(countries);
-  // const { searchSidebarHeight } = useSelector((state) => state.app);
-
+    console.log(windowSize.height);
+  });
   return (
     <div className="App theme layout no-highlight">
-      <ApplicantsLayout />
+      <AtsTable />
     </div>
   );
 }
