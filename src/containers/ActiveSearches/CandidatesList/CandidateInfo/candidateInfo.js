@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./candidateInfo.styles.css";
 import InfoCard from "../../infoCard";
 import ExperienceInfo from "../../ExperienceInfoCard";
-import Button from "../../../components/Button";
+import Button from "../../../../components/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleInfoModal } from "../../../redux/slices/modals";
-import ViewInfoModal from "../../../modals/ViewInfoModal";
+import { toggleInfoModal } from "../../../../redux/slices/modals";
+import ViewInfoModal from "../../../../modals/ViewInfoModal";
 const CandidateInfo = ({
   name,
   image,

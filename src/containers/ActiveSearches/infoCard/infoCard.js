@@ -1,6 +1,6 @@
 import React from "react";
 import "./infoCard.styles.css";
-import Avatar from "../../components/Avatar";
+import Avatar from "../../../components/Avatar";
 import { AiFillStar } from "react-icons/ai";
 const InfoCard = ({ name, currentRole, company, image }) => {
   return (

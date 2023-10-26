@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./searchLayout.styles.css";
 import SearchSidebar from "../../containers/SearchSidebar";
 
-import CandidateInfo from "../../containers/CandidatesList";
+import CandidateInfo from "../../containers/ActiveSearches/CandidatesList";
 import SearchHeader from "../../containers/SearchHeader";
 import { useSelector, useDispatch } from "react-redux";
 import { animated, useSpring } from "@react-spring/web";

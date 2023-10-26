@@ -1,6 +1,6 @@
 import React from "react";
 import "./list.styles.css";
-import { candidateData } from "../../../constants/candidatesData";
+import { candidateData } from "../../../../constants/candidatesData";
 import CandidateInfo from "../CandidateInfo";
 const List = () => {
   return (
