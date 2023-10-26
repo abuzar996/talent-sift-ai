@@ -1,14 +1,22 @@
 export const applicantInfo = [
-  {
-    id_: 1,
-    name: "Abuzar Rahim",
-    location: "San Francisco Bay Area",
-    currentPosition: "Staff Engineer",
-    company: "Ternoa",
-    priority: "High",
-    date: "Jan 17,2109",
-    source: "Job Site",
-  },
+  // {
+  //   id_: 1,
+  //   personalInfo: {
+  //     name: "Abuzar Rahim",
+  //     location: "San Francisco Bay Area",
+  //     currentPosition: "Staff Engineer",
+  //     company: "Ternoa",
+  //   },
+  //   jobMatch: {
+  //     priority: "High",
+  //   },
+  //   AppliedDate: {
+  //     AppliedDate: "Jan 17,2109",
+  //   },
+  //   source: {
+  //     source: "Job Site",
+  //   },
+  // },
   {
     id_: 2,
     name: "Abuzar Rahim",

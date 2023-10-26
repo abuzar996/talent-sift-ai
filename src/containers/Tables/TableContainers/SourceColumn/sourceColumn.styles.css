@@ -1,0 +1,16 @@
+.date-column-custom-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.date-column-custom-table-container > label {
+  text-overflow: wrap;
+  font-size: var(--miniText);
+  font-weight: 400;
+  color: var(--custom);
+}

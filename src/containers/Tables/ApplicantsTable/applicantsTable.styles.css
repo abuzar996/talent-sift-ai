@@ -13,6 +13,14 @@ thead > tr > th {
   color: var(--textSecondary);
   font-weight: 500;
 }
+
+tbody > tr {
+  border-bottom: 1px solid var(--custom);
+}
+
+tbody > tr:hover {
+  background-color: var(--primary300);
+}
 .main-custom-table-outer-container {
   width: 100%;
 

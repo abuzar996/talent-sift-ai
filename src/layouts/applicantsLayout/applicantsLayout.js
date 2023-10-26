@@ -1,9 +1,6 @@
 import React from "react";
 import SearchHeader from "../../containers/SearchHeader";
-import CustomTable from "../../containers/Tables/CustomTable/table";
-import "./applicantslayout.styles.css";
-import { applicantInfo } from "../../constants/applicantsInfo";
-import ApplicantTable from "../../containers/Tables/ApplicantsTable";
+import ApplicantTable from "../../containers/Tables/ApplicantsTable/applicantsTable";
 const ApplicantsLayout = () => {
   return (
     <div className="applicant-layout-container">
@@ -11,9 +8,7 @@ const ApplicantsLayout = () => {
         <SearchHeader />
       </div>
 
-      <CustomTable>
-        <ApplicantTable data={applicantInfo} />{" "}
-      </CustomTable>
+      <ApplicantTable />
     </div>
   );
 };
