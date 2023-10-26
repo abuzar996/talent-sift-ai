@@ -35,3 +35,18 @@
   border: 3px solid var(--green);
   border-radius: 10px;
 }
+@media (max-width: 750px) {
+  .high-priority-candidate-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .high-priority-candidate-container-label {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--green);
+  }
+}

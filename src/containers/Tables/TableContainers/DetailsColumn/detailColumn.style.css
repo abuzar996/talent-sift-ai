@@ -1,12 +1,12 @@
 .detail-column-custom-table-container {
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   /* width: 250px; */
+  flex: 1;
 
   align-items: center;
-  justify-content: flex-start;
+
   gap: 5px;
 }
 .detail-column-custom-table-icons {
@@ -19,4 +19,15 @@
 .detail-column-custom-table-icons:hover {
   background-color: var(--primary300);
   color: var(--primary100);
+}
+
+@media (max-width: 750px) {
+  .detail-column-custom-table-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
 }

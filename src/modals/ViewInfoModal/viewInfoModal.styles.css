@@ -1,11 +1,5 @@
 .view-info-modal-container {
-  float: right;
-  position: fixed;
-  background-color: aqua;
-  width: 70%;
-  top: 0px;
-  right: 0;
-  height: 1000px;
-
-  border-radius: 2px solid green;
+  background-color: var(--custom);
+  display: flex;
+  border: 2px solid green;
 }

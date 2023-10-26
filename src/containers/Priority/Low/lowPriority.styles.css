@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: center;
+  align-items: flex-start;
 }
 
 .low-priority-candidate-container-remarks {
@@ -32,4 +32,19 @@
   width: 15px;
   border: 3px solid var(--orange);
   border-radius: 10px;
+}
+@media (max-width: 750px) {
+  .low-priority-candidate-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .low-priority-candidate-container-label {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--orange);
+  }
 }

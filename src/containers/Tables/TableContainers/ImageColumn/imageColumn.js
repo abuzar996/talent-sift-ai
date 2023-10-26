@@ -1,6 +1,6 @@
 import React from "react";
 import "./imageColumn.styles.css";
-import image1 from "../../../assets/photo1.jpg";
+import image1 from "../../../../assets/photo1.jpg";
 const ImageColumn = () => {
   return (
     <div className="image-column-custom-table-container">

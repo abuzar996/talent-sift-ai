@@ -1,18 +1,27 @@
 .search-side-bar-main-container {
   width: 100%;
   background-color: var(--main);
+
+  overflow-x: scroll;
 }
 
 .search-side-bar-main-header {
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
+
   padding: 10px;
   justify-content: space-between;
+  align-items: center;
+  background-color: var(--main);
   flex: 1;
+  position: sticky;
+  top: 0;
 }
 .search-side-bar-main-header-heading {
   color: var(--textSecondary);
   font-size: var(--subHeading);
+
   font-weight: 600;
   text-decoration: underline;
 }

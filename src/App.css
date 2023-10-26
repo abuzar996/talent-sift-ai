@@ -27,7 +27,7 @@
 .layout {
   margin: 0;
   padding: 0;
-  display: flex;
+  /* display: flex; */
   box-sizing: content-box;
   width: 100vw;
   height: 100vh;

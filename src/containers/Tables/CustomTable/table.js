@@ -1,29 +1,22 @@
 import React, { useEffect, useRef } from "react";
 import "./table.styles.css";
-import {
-  setTableWidth,
-  updateTableViewHeight,
-} from "../../redux/slices/appSlice";
+import { updateTableViewHeight } from "../../../redux/slices/appSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { GrPrevious, GrNext } from "react-icons/gr";
-import { useDimentions } from "../../hooks/useDimensions";
+import { useDimentions } from "../../../hooks/useDimensions";
 
 const CustomTable = ({ children }) => {
-  //  const [height, setHeight] = useState(0);
+  //const [height, setHeight] = useState(0);
   const Ref = useRef();
   const dispatch = useDispatch();
 
   const windowSize = useDimentions();
   const {
-    tableWidth,
     mainHeaderHeight,
     searchHeaderHeight,
     crousalHeight,
     tableViewHeight,
   } = useSelector((state) => state.app);
-  useEffect(() => {
-    dispatch(setTableWidth(Ref.current.clientWidth - 20));
-  }, [Ref, windowSize, dispatch]);
 
   useEffect(() => {
     dispatch(updateTableViewHeight(windowSize.height));
@@ -35,17 +28,15 @@ const CustomTable = ({ children }) => {
     tableViewHeight,
     dispatch,
   ]);
-
+  useEffect(() => {
+    console.log(windowSize);
+  }, [windowSize]);
   return (
-    <div
-      ref={Ref}
-      className="custom-table-container"
-      style={{ height: `${tableViewHeight}px` }}
-    >
+    <div ref={Ref} className="custom-table-container">
       <div
         className="custom-table-container-body"
         style={{
-          width: `${tableWidth}px`,
+          width: "100%",
         }}
       >
         {children}
