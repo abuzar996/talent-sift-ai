@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { useDimentions } from "../../hooks/useDimensions";
 import "./viewInfoModal.styles.css";
 //import { animated, useSpring } from "@react-spring/web";
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 import { animated, useSpring } from "@react-spring/web";
 const ViewInfoModal = () => {
-  const { infoModalOpen } = useSelector((state) => state.modal);
+  //const { infoModalOpen } = useSelector((state) => state.modal);
   const windowSize = useDimentions();
   const modalAnimation = useSpring({
     width: "800px",

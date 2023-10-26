@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./applicantInfo.styles.css";
+import "./applicantsTable.styles.css";
 import DetailColumn from "../TableContainers/DetailsColumn";
 import CandidateColumn from "../TableContainers/CandidateColumn";
 import Priority from "../../Priority";

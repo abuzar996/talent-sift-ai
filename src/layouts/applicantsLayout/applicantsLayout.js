@@ -3,7 +3,7 @@ import SearchHeader from "../../containers/SearchHeader";
 import CustomTable from "../../containers/Tables/CustomTable/table";
 import "./applicantslayout.styles.css";
 import { applicantInfo } from "../../constants/applicantsInfo";
-//import ApplicantInfo from "./ApplicantInfo";
+import ApplicantTable from "../../containers/Tables/ApplicantsTable";
 const ApplicantsLayout = () => {
   return (
     <div className="applicant-layout-container">
@@ -11,7 +11,9 @@ const ApplicantsLayout = () => {
         <SearchHeader />
       </div>
 
-      <CustomTable>{/* <ApplicantInfo data={applicantInfo} /> */}</CustomTable>
+      <CustomTable>
+        <ApplicantTable data={applicantInfo} />{" "}
+      </CustomTable>
     </div>
   );
 };
