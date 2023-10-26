@@ -4,7 +4,7 @@ import { setTableHeight } from "../../../redux/slices/appSlice";
 import { useDimentions } from "../../../hooks/useDimensions";
 import "./table.styles.css";
 
-const Table = ({ children, applicantData }) => {
+const Table = ({ children, applicantData, headers }) => {
   const dispatch = useDispatch();
   const windowSize = useDimentions();
   const { tableHeight, crousalHeight, mainHeaderHeight, searchHeaderHeight } =
@@ -45,13 +45,9 @@ const Table = ({ children, applicantData }) => {
         <table className="ats-main-custom-table-outer-container">
           <thead className="ats-main-custom-table-thead-container">
             <tr className="ats-main-custom-table-trow-container">
-              <th></th>
-              <th>Candidate</th>
-              <th>Job Match</th>
-              <th>Applied Date</th>
-              <th>Source</th>
-              <th>Details</th>
-              <th>Actions</th>
+              {headers.map((header, i) => (
+                <th key={i}>{header}</th>
+              ))}
             </tr>
           </thead>
 

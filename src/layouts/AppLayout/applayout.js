@@ -1,16 +1,16 @@
 import React from "react";
 import "./applayout.styles.css";
-import MenuLayout from "../menuLayout/menuLayout";
+import MenuLayout from "../MenuLayout/menuLayout";
 //import SearchLayout from "../searchLayout";
-import ApplicantsLayout from "../applicantsLayout";
-//import ApplicantsLayout from "../applicantsLayout";
+import ApplicantsLayout from "../ApplicantsLayout";
+
 const Applayout = () => {
   return (
-    // <div className="app-layout-container-main">
     <MenuLayout>
-      <ApplicantsLayout />
+      <div className="layout-child-outlet-container">
+        <ApplicantsLayout />
+      </div>
     </MenuLayout>
-    // </div>
   );
 };
 

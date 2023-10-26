@@ -4,10 +4,7 @@ import ApplicantTable from "../../containers/Tables/ApplicantsTable/applicantsTa
 const ApplicantsLayout = () => {
   return (
     <div className="applicant-layout-container">
-      <div>
-        <SearchHeader />
-      </div>
-
+      <SearchHeader />
       <ApplicantTable />
     </div>
   );

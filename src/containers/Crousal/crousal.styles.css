@@ -13,6 +13,7 @@
   box-sizing: border-box;
   display: flex;
   gap: 2%;
+  cursor: pointer;
 }
 .crousal-flex-padding {
   padding: 10px;
