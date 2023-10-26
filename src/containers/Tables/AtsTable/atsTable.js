@@ -1,11 +1,10 @@
 import React from "react";
-import "./applicantsTable.styles.css";
+import "./atsTable.styles.css";
 import DetailColumn from "../TableContainers/DetailsColumn";
 import CandidateColumn from "../TableContainers/CandidateColumn";
 import Priority from "../TableContainers/Priority";
-
+import ActionsColumn from "../TableContainers/ActionsColumn";
 import ImageColumn from "../TableContainers/ImageColumn";
-import Button from "../../../components/Button";
 
 import CustomTable from "../CustomTable/table";
 import Table from "../Table";
@@ -32,7 +31,8 @@ const ATsTable = () => {
         <DateColumn />
         <SourceColumn />
         <DetailColumn />
-        <Button>Advance</Button>
+        <ActionsColumn />
+        <ActionsColumn />
       </Table>
     </CustomTable>
   );

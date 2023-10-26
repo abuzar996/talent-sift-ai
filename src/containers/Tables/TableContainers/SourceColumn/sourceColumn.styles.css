@@ -12,5 +12,5 @@
   text-overflow: wrap;
   font-size: var(--miniText);
   font-weight: 400;
-  color: var(--custom);
+  color: var(--textSecondary);
 }
