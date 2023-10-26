@@ -1,5 +1,5 @@
 import React from "react";
-import Priority from "../../Priority";
+import Priority from "../Priority";
 import "./matchColumn.styles.css";
 const MatchColumn = ({ priority }) => {
   return (
